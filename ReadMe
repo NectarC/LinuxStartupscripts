@@ -1,0 +1,4 @@
+Steps to add the serice for the startup
+ 1. Place the StartupsScripts file to /etc/init.d/ path
+ 2. sudo chkconfig <servicename> on    #(add service to auto start)
+ 3. sudo chconfig --list <servicename>  #(checking it added properly)

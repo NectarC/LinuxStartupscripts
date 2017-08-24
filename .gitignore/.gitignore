@@ -1,0 +1,28 @@
+#! /bin/sh
+# chkconfig: 345 20 80
+# description: Application description
+# processname: <Name of the Process >
+case "$1" in
+  start)
+        echo -n "Starting Application"
+        /bin/su - <username> -c "<call the script to start application>"		
+        echo "."
+        ;;
+  stop)
+        echo -n "Stopping Application"
+        /bin/su - <username> -c "<Call the script to stop application>"
+		
+        echo "."
+        ;;
+  restart)
+        echo -n "Restarting Application"
+        /bin/su - <username> -c "<Call the script to restart application>"
+		
+        echo "."
+        ;;
+
+   *)
+        echo "Usage: service App {start|stop|restart}"
+        exit 1
+esac
+exit 0
